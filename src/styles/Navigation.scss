@@ -1,0 +1,47 @@
+@import 'colors';
+
+ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0 auto 0 auto;
+    text-align: center;
+    padding: 0;
+
+    li {   
+        
+        display: flex;
+        flex-grow: 1;
+        border-right: 1px solid $nav-color;
+        a {
+            padding: 0.75em 0 0.75em 0;
+            text-decoration: none;
+            color: $nav-color;
+            background-color: $main-color;
+            flex-grow: 1;
+           
+        }
+        a:hover {
+            background-color: $nav-background-color-hover;
+            cursor: pointer;
+            color: $nav-color-hover;
+        }
+
+        ul {
+            display: none;
+        }
+    }
+
+    li:last-child {
+        border-right: none;
+    }
+
+    li:hover ul {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+
+        li {
+            position: relative;
+        }
+    }
+}
