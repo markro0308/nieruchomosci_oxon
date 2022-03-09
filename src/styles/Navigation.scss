@@ -24,6 +24,7 @@ ul {
             background-color: $nav-background-color-hover;
             cursor: pointer;
             color: $nav-color-hover;
+            transition: .2s;
         }
 
         ul {
@@ -42,6 +43,9 @@ ul {
 
         li {
             position: relative;
+           // top: 53px; //do ew edycji na bardziej responsywne
+            border-right: none;
+            
         }
     }
 }

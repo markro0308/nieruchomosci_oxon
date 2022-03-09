@@ -6,6 +6,7 @@ import Navigation from './Navigation';
 import Page from './Page';
 
 import '../styles/App.scss';
+import "../fontello/css/fontello.css";
 
 function App() {
   return (
