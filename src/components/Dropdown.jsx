@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-function Dropdown({ sublist, path }) {
+function Dropdown({ sublist }) {
     const submenu = sublist.map(subitem => (
         <li key={subitem.subname}>
-            <Link to={path}>{subitem.subname}</Link>
+            <Link to={subitem.path}>{subitem.subname}</Link>
         </li>
     ));
     return (

@@ -1,11 +1,17 @@
 @import 'colors';
 
-img {
-    height: 40vh;
-  //  overflow: hidden;
-    width: 100%;
-}
 
 p {
-  line-height: 1.2em;
+  line-height: 1.6em;
+  font-size: 15px;
+}
+
+.management-list-title {
+  text-align: center;
+}
+
+.management-list {
+  flex-direction: row;
+  line-height: 1.6em;
+  font-size: 15px;
 }

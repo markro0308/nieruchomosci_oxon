@@ -1,6 +1,12 @@
 @import 'colors';
 
-ul {
+img {
+    height: 40vh;
+  //  overflow: hidden;
+    width: 100%;
+}
+
+.nav-list {
     display: flex;
     list-style-type: none;
     margin: 0 auto 0 auto;
