@@ -2,7 +2,7 @@ import React from 'react';
 
 function Footer() {
     return (
-        <p>Footerrr</p>
+        <p>Wszystkie prawa zastrzeżone</p>
     );
 };
 

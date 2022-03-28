@@ -23,6 +23,12 @@
       "css": "location",
       "code": 59394,
       "src": "fontawesome"
+    },
+    {
+      "uid": "c47efa0e3e74f6ba4c2562c1258fff1f",
+      "css": "to-end",
+      "code": 59395,
+      "src": "fontawesome"
     }
   ]
 }

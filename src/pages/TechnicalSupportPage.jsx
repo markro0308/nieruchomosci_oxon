@@ -3,8 +3,8 @@ import React from 'react';
 function TechnicalSupportPage() {
     return (
         <>
-            <h3 className="management-list-title">Obsługa techniczna</h3>
-            <ul className="management-list">
+            <h3 className="page-list-title">Obsługa techniczna</h3>
+            <ul className="page-list">
                 <li>Prowadzenie bieżącej ewidencji zgłoszeń konserwacyjnych i terminów ich realizacji</li>
                 <li>Prowadzenie książki obiektu budowlanego zgodnie z obowiązującymi przepisami</li>
                 <li>Przechowywanie i utrzymywanie w należytym stanie dokumentacji technicznej budynku</li>

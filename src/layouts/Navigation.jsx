@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 
-import photo from '../images/landscape.jpg';
+import photo from '../images/slajder2.jpg';
 import Dropdown from '../components/Dropdown';
 
 import '../styles/Navigation.scss';
@@ -17,7 +17,7 @@ const list = [
         ]
     },
     {
-        name: "Wycena nieruchomości", path: "/wycena-nieruchomosci",
+        name: "Wycena nieruchomości", path: "/oferta",
         sublist: [
             { subname: "Oferta", path: "oferta" },
             { subname: "Potrzebne dokumenty", path: "potrzebne-dokumenty" }
@@ -28,6 +28,23 @@ const list = [
 ]
 
 function Navigation() {
+
+    const [scrolled, setScrolled] = useState(false);
+
+    const handleScroll = () => {
+        const offset = window.scrollY;
+        if (offset > 74) {
+            setScrolled(true);
+        }
+        else {
+            setScrolled(false);
+        }
+    }
+
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll)
+    }, [])
+
 
     const menu = list.map(item => (
         <li key={item.name}>
@@ -44,7 +61,7 @@ function Navigation() {
 
     return (
         <>
-            <ul className="nav-list">
+            <ul className={scrolled ? 'nav-list sticky' : 'nav-list'}>
                 {menu}
             </ul>
             <img src={photo} alt="Filharmonia" />

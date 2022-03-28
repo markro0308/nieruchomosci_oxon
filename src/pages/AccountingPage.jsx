@@ -3,8 +3,8 @@ import React from 'react';
 function AccountingPage() {
     return (
         <>
-            <h3 className="management-list-title">Obsługa księgowo-bankowa</h3>
-            <ul className="management-list">
+            <h3 className="page-list-title">Obsługa księgowo-bankowa</h3>
+            <ul className="page-list">
                 <li>Reprezentowanie Wspólnoty Mieszkaniowej na zewnątrz przed organami administracji państwowej, samorządowej, sądami i organami egzekucyjnymi oraz bankiem.</li>
                 <li>Prowadzenie i udostępnianie właścicielom i uprawnionym organom dokumentacji wspólnoty.</li>
                 <li>Prowadzenie korespondencji wspólnoty z kontrahentami i urzędami.</li>

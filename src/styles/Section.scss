@@ -6,12 +6,37 @@ p {
   font-size: 15px;
 }
 
-.management-list-title {
+.page-list-title {
   text-align: center;
 }
 
-.management-list {
-  flex-direction: row;
+.page-list {
+  //flex-direction: column;
   line-height: 1.6em;
   font-size: 15px;
+  list-style-image: url('../images/arrowcurved.png');
+}
+
+.page-list-circle {
+  list-style-type: square;
+ // flex-direction: column;
+  line-height: 1.6em;
+  font-size: 15px;
+}
+
+#contact_box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+
+  form {
+    display: flex;
+    flex-direction: column;
+   // flex-grow: 1;
+  }
+
+  #adress {
+  //  flex-grow: 1;
+  }
+
 }

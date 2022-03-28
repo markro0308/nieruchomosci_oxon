@@ -3,14 +3,20 @@
     flex-grow: 2;
     text-align: center;
     img {
-        height: 10vw;
+        height: 7vw;
     }
 }
 
 .contact {
     flex-grow: 1;
-    height: 10vw;
-    text-align: end;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: center;
+    height: 7vw;
     padding-right: 1em;
-    padding-top: 0.5em;
+
+    p {
+        margin: 0;
+    }
 }

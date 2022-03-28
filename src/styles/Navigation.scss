@@ -1,8 +1,8 @@
 @import 'colors';
 
 img {
-    height: 40vh;
-  //  overflow: hidden;
+    height: 50vh;
+    overflow: hidden;
     width: 100%;
 }
 
@@ -12,6 +12,7 @@ img {
     margin: 0 auto 0 auto;
     text-align: center;
     padding: 0;
+    transition: all .7s ease-in;
 
     li {   
         
@@ -55,3 +56,9 @@ img {
         }
     }
 }
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }

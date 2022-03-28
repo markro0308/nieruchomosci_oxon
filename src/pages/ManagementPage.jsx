@@ -4,8 +4,8 @@ import React from 'react';
 function ManagementPage() {
     return (
         <>
-            <h3 className="management-list-title">Zarządzanie i administrowanie nieruchomościami</h3>
-            <ul className="management-list">
+            <h3 className="page-list-title">Zarządzanie i administrowanie nieruchomościami</h3>
+            <ul className="page-list">
                 <li>Rejestracja Wspólnoty poprzez zgłoszenie jej do stosownych urzędów, uzyskanie numeru NIP i Regon oraz założenie rachunku bankowego</li>
                 <li>Protokolarne przejęcie nieruchomości wraz z jej dokumentacją techniczną od dewelopera lub administratora</li>
                 <li>Przygotowanie projektów umów oraz kontrolę nad prawidłowością wykonania umów na dostawę mediów: wody, energii elektrycznej, energii cieplnej, odprowadzenia ścieków, wywozu nieczystości</li>
