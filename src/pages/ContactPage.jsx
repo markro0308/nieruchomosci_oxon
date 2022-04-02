@@ -14,10 +14,33 @@ function ContactPage() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        let lettersNameSurname = /^[a-zA-ZąĄćĆęĘóÓłŁśŚźŹżŻńŃ ]+[ ]{1}[a-zA-ZąĄćĆęĘóÓłŁśŚźŹżŻńŃ]+[-]{0,1}[a-zA-ZąĄćĆęĘóÓłŁśŚźŹżŻńŃ ]*$/;
+        let number = /^[0-9]{9}$/;
+        let number_field = document.getElementById("phone_nr");
+        let name_field = document.getElementById("name_surname");
+        let email_field = document.getElementById("email");
+
+        if (!name_field.value.match(lettersNameSurname)) {
+            alert("Podaj imię i nazwisko w pierwszym polu. Imię i nazwisko nie może zawierać cyfr i znaków specjalnych.");
+            e.preventDefault();
+            return;
+        }
+        if (email_field.value === "" && number_field.value === "") {
+            alert("Podaj do kontaktu numer telefonu lub adres email");
+            e.preventDefault();
+            return;
+        }
+        if (number_field.value !== "" && !number_field.value.match(number)) {
+            alert("Numer telefonu może się składać tylko z 9 cyfr");
+            e.preventDefault();
+            return;
+        }
+
         setName("");
         setMail("");
         setPhone("");
         setMessage("");
+        alert("Wiadomość została wysłana! Wkrótce się z Tobą skontaktujemy")
     };
 
     return (
@@ -33,12 +56,12 @@ function ContactPage() {
                 <p>Nr konta bankowego:</p>
                 <p>52 1952 0000 5465 0085 6789 8545</p>
             </div>
-            <div>
+            <div id="form-box">
                 <form onSubmit={handleSubmit}>
-                    <input type="text" value={name} onChange={handleSetName} placeholder="Imię i Nazwisko" />
-                    <input type="text" value={mail} onChange={handleSetMail} placeholder="Adres email" />
-                    <input type="text" value={phone} onChange={handleSetPhone} placeholder="Numer telefonu" />
-                    <textarea cols="30" rows="10" value={message} onChange={handleSetMessage} placeholder="Treść wiadomości"></textarea>
+                    <input type="text" id="name_surname" value={name} onChange={handleSetName} placeholder="Imię i Nazwisko" required />
+                    <input type="email" id="email" value={mail} onChange={handleSetMail} placeholder="Adres email" />
+                    <input type="text" id="phone_nr" value={phone} onChange={handleSetPhone} placeholder="Numer telefonu" />
+                    <textarea cols="30" rows="10" value={message} onChange={handleSetMessage} placeholder="Treść wiadomości" required></textarea>
                     <button>Wyślij</button>
                 </form>
             </div>

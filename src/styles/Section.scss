@@ -76,11 +76,49 @@ p {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  width: 80%;
+  margin: 0 auto;
 
-  form {
-    display: flex;
-    flex-direction: column;
-    // flex-grow: 1;
+  // #adress {
+  //   flex-grow: 1;
+  // }
+
+  #form-box {
+    //  flex-grow: 1;
+
+    form {
+      display: flex;
+      flex-direction: column;
+      //  flex-grow: 2;
+
+      input,
+      textarea {
+        padding: 1em;
+        margin: 1em;
+        color: inherit;
+        font-size: 15px;
+        font-family: inherit;
+      }
+
+      button {
+        margin: 15px;
+        text-align: center;
+        width: inherit;
+        height: 58px;
+        background-color: $main-color;
+        color: $nav-color;
+        font-size: 15px;
+        font-family: inherit;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: $nav-background-color-hover;
+        color: $nav-color-hover;
+        font-size: 20px;
+        transition: 0.2s;
+      }
+
+    }
   }
-
 }
