@@ -1,5 +1,10 @@
 @import 'colors';
 
+.content-box {
+  width: 80%;
+  margin: 0 auto;
+  text-align: justify;
+}
 
 p {
   line-height: 1.6em;
@@ -8,20 +13,63 @@ p {
 
 .page-list-title {
   text-align: center;
+  font-size: 1.5em;
+  //  margin-top: 3em;
+}
+
+.page-list-subtitle {
+  font-size: 1em;
 }
 
 .page-list {
+  line-height: 2.5em;
   //flex-direction: column;
-  line-height: 1.6em;
   font-size: 15px;
   list-style-image: url('../images/arrowcurved.png');
+  justify-content: center;
+
+  li {
+    justify-content: center;
+  }
 }
 
 .page-list-circle {
   list-style-type: square;
- // flex-direction: column;
+  // flex-direction: column;
   line-height: 1.6em;
   font-size: 15px;
+}
+
+#docs-row-list {
+  display: flex;
+  flex-direction: row;
+}
+
+#image-offer-section {
+  background-image: url(../images/offer.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 40vh;
+  width: 100%;
+}
+
+#image-technical-section {
+  background-image: url(../images/technical-support.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 40vh;
+  width: 100%;
+}
+
+#image-accounting-section {
+  background-image: url(../images/accounting.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 40vh;
+  width: 100%;
 }
 
 #contact_box {
@@ -32,11 +80,7 @@ p {
   form {
     display: flex;
     flex-direction: column;
-   // flex-grow: 1;
-  }
-
-  #adress {
-  //  flex-grow: 1;
+    // flex-grow: 1;
   }
 
 }

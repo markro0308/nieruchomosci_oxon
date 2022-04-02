@@ -10,18 +10,19 @@
     height: 7vw;
   }
 
-  main {
-    section {
-      width: 80%;
-      margin: 0 auto;
-      text-align: justify;
-    }
-  }
+  // main {
+  //   section {
+  //     width: 80%;
+  //     margin: 0 auto;
+  //     text-align: justify;
+  //   }
+  // }
 
   footer {
     background-color: $main-color;
     text-align: center;
     color: $nav-color;
+    margin-top: auto;
   }
 
 }

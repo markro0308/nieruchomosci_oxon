@@ -17,6 +17,7 @@ img {
     li {   
         
         display: flex;
+        flex-direction: column;
         flex-grow: 1;
         border-right: 1px solid $nav-color;
         a {
@@ -43,14 +44,21 @@ img {
         border-right: none;
     }
 
+    .nav-list-parent {
+        position: relative;
+    }
+
     li:hover ul {
         display: flex;
         flex-direction: column;
         position: absolute;
+        padding: 0;
+        width: 100%;
+        top: calc(1.2em + 0.75em + 0.75em); 
 
         li {
-            position: relative;
-           // top: 53px; //do ew edycji na bardziej responsywne
+            // position: relative;
+            // top: 54px; //do ew edycji na bardziej responsywne
             border-right: none;
             
         }
