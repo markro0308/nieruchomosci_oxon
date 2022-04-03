@@ -22,14 +22,15 @@ p {
 }
 
 .page-list {
-  line-height: 2.5em;
+  // line-height: 2.5em;
   //flex-direction: column;
   font-size: 15px;
-  list-style-image: url('../images/arrowcurved.png');
-  justify-content: center;
+  list-style-type: "❯";
 
   li {
-    justify-content: center;
+    margin-bottom: 1em;
+    line-height: 2em;
+    padding-left: 0.5em;
   }
 }
 
@@ -102,6 +103,7 @@ p {
 
       button {
         margin: 15px;
+        margin-bottom: 30px;
         text-align: center;
         width: inherit;
         height: 58px;
@@ -121,4 +123,10 @@ p {
 
     }
   }
+}
+
+#map-section {
+  width: 100%;
+  height: 50vh;
+  margin-bottom: 0;
 }

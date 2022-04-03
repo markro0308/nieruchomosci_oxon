@@ -4,7 +4,7 @@
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  
+
   header {
     display: flex;
     height: 7vw;
@@ -23,7 +23,11 @@
     text-align: center;
     color: $nav-color;
     margin-top: auto;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
   }
 
 }
-
