@@ -6,6 +6,7 @@ import photo from '../images/slajder4.jpg';
 import Dropdown from '../components/Dropdown';
 
 import '../styles/Navigation.scss';
+import Slideshow from '../components/Slideshow';
 
 const list = [
     { name: "Strona główna", path: "/" },
@@ -68,7 +69,8 @@ function Navigation() {
             <ul className={scrolled ? 'nav-list sticky' : 'nav-list'}>
                 {menu}
             </ul>
-            <img src={photo} alt="Filharmonia" />
+            {/* <img src={photo} alt="Filharmonia" /> */}
+            <Slideshow />
         </>
     );
 };

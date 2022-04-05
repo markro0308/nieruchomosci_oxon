@@ -1,11 +1,5 @@
 @import 'colors';
 
-img {
-    height: 50vh;
-    overflow: hidden;
-    width: 100%;
-}
-
 .nav-list {
     display: flex;
     list-style-type: none;
@@ -13,21 +7,24 @@ img {
     text-align: center;
     padding: 0;
     transition: all .7s ease-in;
+    z-index: 99999;
 
-    li {   
-        
+    li {
+
         display: flex;
         flex-direction: column;
         flex-grow: 1;
         border-right: 1px solid $nav-color;
+
         a {
             padding: 0.75em 0 0.75em 0;
             text-decoration: none;
             color: $nav-color;
             background-color: $main-color;
             flex-grow: 1;
-           
+
         }
+
         a:hover {
             background-color: $nav-background-color-hover;
             cursor: pointer;
@@ -54,13 +51,11 @@ img {
         position: absolute;
         padding: 0;
         width: 100%;
-        top: calc(1.2em + 0.75em + 0.75em); 
+        top: calc(1.2em + 0.75em + 0.75em);
+        z-index: 99999;
 
         li {
-            // position: relative;
-            // top: 54px; //do ew edycji na bardziej responsywne
             border-right: none;
-            
         }
     }
 }
@@ -69,4 +64,52 @@ img {
     position: fixed;
     top: 0;
     width: 100%;
-  }
+}
+
+img {
+    height: 50vh;
+    overflow: hidden;
+    width: 100%;
+}
+
+/*...................Sekcja Slideshow...............................*/
+
+.slideshow {
+    //  margin: 0 auto;
+    overflow: hidden;
+    width: 100%;
+}
+
+.slideshowSlider {
+    white-space: nowrap;
+    transition: ease 1000ms;
+}
+
+.slide {
+    display: inline-block;
+    height: 50vh;
+    width: 100%;
+
+    img {
+        height: 50vh;
+        width: 100%;
+    }
+}
+
+.slideshowDots {
+    text-align: center;
+}
+
+.slideshowDot {
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin: 15px 7px 0px;
+    background-color: #c4c4c4;
+}
+
+.slideshowDot.active {
+    background-color: $main-color;
+}
