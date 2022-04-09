@@ -1,7 +1,9 @@
 import React from 'react';
 import { HashLink } from 'react-router-hash-link';
 
-function Dropdown({ sublist }) {
+function Dropdown({ sublist, click }) {
+
+
 
     const scrollWithOffset = (el) => {
         const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
@@ -11,11 +13,17 @@ function Dropdown({ sublist }) {
 
     const submenu = sublist.map(subitem => (
         <li key={subitem.subname}>
-            <HashLink smooth to={`${subitem.path}${subitem.hash}`} scroll={scrollWithOffset}>{subitem.subname}</HashLink>
+            <HashLink
+                smooth to={`${subitem.path}${subitem.hash}`}
+                scroll={scrollWithOffset}
+                onClick={click}
+            >
+                {subitem.subname}
+            </HashLink>
         </li>
     ));
     return (
-        <ul>
+        <ul className='sub-nav-ul'>
             {submenu}
         </ul>
     );

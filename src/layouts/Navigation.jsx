@@ -1,15 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import { NavLink } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
 
-import photo from '../images/slajder4.jpg';
 import Dropdown from '../components/Dropdown';
 
 import '../styles/Navigation.scss';
 import Slideshow from '../components/Slideshow';
 
 const list = [
-    { name: "Strona główna", path: "/" },
+    { name: "Strona główna", path: "/", hash: "#" },
     {
         name: "Zarządzanie nieruchomościami", path: "/zarzadzanie-i-administrowanie-nieruchomosciami", hash: "#",
         sublist: [
@@ -25,13 +23,43 @@ const list = [
             { subname: "Potrzebne dokumenty", path: "/oferta", hash: "#docs-section" }
         ]
     },
-    { name: "Kontakt", path: "/kontakt" },
-    { name: "Certyfikaty", path: "/certyfikaty" },
+    { name: "Kontakt", path: "/kontakt", hash: "#" },
+    { name: "Certyfikaty", path: "/certyfikaty", hash: "#" },
 ]
 
 function Navigation() {
 
     const [scrolled, setScrolled] = useState(false);
+    const [buttonClicked, setButtonClicked] = useState(false);
+
+    const handleShowMenu = () => {
+        var x = document.getElementsByClassName('main-nav-ul')[0];
+        x.classList.toggle('menu-active');
+        setButtonClicked(!buttonClicked);
+
+        var y = document.getElementsByClassName('sub-nav-ul');
+        for (var i = 0; i < y.length; i++) {
+            if (y[i].classList.contains('submenu-active')) {
+                y[i].classList.remove('submenu-active');
+            };
+        };
+
+    }
+
+    const handleShowSublist = (e) => {
+        e.stopPropagation();
+        var x = e.target.nextSibling;
+        x.classList.toggle('submenu-active');
+    }
+
+    const handleClick = (e) => {
+        e.stopPropagation();
+    }
+
+    const handleClickOnMenuList = (e) => {
+        e.stopPropagation();
+        handleShowMenu();
+    }
 
     const handleScroll = () => {
         const offset = window.scrollY;
@@ -53,23 +81,25 @@ function Navigation() {
 
 
     const menu = list.map(item => item.sublist ? (
-        <li key={item.name} className='nav-list-parent'>
-            <HashLink smooth to={`${item.path}${item.hash}`}>{item.name}</HashLink>
-            <Dropdown sublist={item.sublist} />
+        <li key={item.name} className='nav-list-parent' onClick={handleShowSublist}>
+            <HashLink smooth to={buttonClicked ? "#;" : `${item.path}${item.hash}`}>{item.name}</HashLink>
+            <Dropdown sublist={item.sublist} click={buttonClicked ? handleClickOnMenuList : handleClick} />
         </li>
     ) : (
         <li key={item.name}>
-            <NavLink to={item.path}>{item.name}</NavLink>
+            <HashLink smooth to={`${item.path}${item.hash}`} onClick={buttonClicked ? handleClickOnMenuList : null}>{item.name}</HashLink>
         </li>
     )
     )
 
     return (
         <>
-            <ul className={scrolled ? 'nav-list sticky' : 'nav-list'}>
-                {menu}
-            </ul>
-            {/* <img src={photo} alt="Filharmonia" /> */}
+            <div className={scrolled ? 'nav-list sticky' : 'nav-list'}>
+                <button className='icon' onClick={handleShowMenu}><i class="icon-menu"></i></button>
+                <ul className='main-nav-ul'>
+                    {menu}
+                </ul>
+            </div>
             <Slideshow />
         </>
     );
