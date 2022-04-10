@@ -33,11 +33,11 @@ function Navigation() {
     const [buttonClicked, setButtonClicked] = useState(false);
 
     const handleShowMenu = () => {
-        var x = document.getElementsByClassName('main-nav-ul')[0];
+        const x = document.getElementsByClassName('main-nav-ul')[0];
         x.classList.toggle('menu-active');
         setButtonClicked(!buttonClicked);
 
-        var y = document.getElementsByClassName('sub-nav-ul');
+        const y = document.getElementsByClassName('sub-nav-ul');
         for (var i = 0; i < y.length; i++) {
             if (y[i].classList.contains('submenu-active')) {
                 y[i].classList.remove('submenu-active');
@@ -48,7 +48,7 @@ function Navigation() {
 
     const handleShowSublist = (e) => {
         e.stopPropagation();
-        var x = e.target.nextSibling;
+        const x = e.target.nextSibling;
         x.classList.toggle('submenu-active');
     }
 

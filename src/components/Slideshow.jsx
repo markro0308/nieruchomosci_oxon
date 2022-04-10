@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import photo3 from '../images/slajder2.jpg';
 import photo2 from '../images/slajder3.jpg';
 import photo1 from '../images/slajder4.jpg';
+//Photo by <a href="https://unsplash.com/@paulfiedler?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Paul Fiedler</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 
 const photos = [photo1, photo2, photo3];
 const delay = 5000;

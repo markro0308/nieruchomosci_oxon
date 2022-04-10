@@ -1,5 +1,6 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
+import CertificatesPage from '../pages/CertificatesPage';
 import ContactPage from '../pages/ContactPage';
 import HomePage from '../pages/HomePage';
 import ManagementPage from '../pages/ManagementPage';
@@ -13,6 +14,7 @@ function Page() {
             <Route path="/zarzadzanie-i-administrowanie-nieruchomosciami" element={<ManagementPage />} />
             <Route path="/oferta" element={<OfferPage />} />
             <Route path="/kontakt" element={<ContactPage />} />
+            <Route path="/certyfikaty" element={<CertificatesPage />} />
         </Routes>
     );
 };

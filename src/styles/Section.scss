@@ -50,14 +50,9 @@ p {
   }
 }
 
-@media only screen and (max-width: 992px) {
-  #docs-row-list {
-    flex-direction: column;
-  }
-}
-
 #image-offer-section {
   background-image: url(../images/offer.jpg);
+  // Photo by <a href="https://unsplash.com/@nickmorrison?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Nick Morrison</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -67,6 +62,7 @@ p {
 
 #image-technical-section {
   background-image: url(../images/technical-support.jpg);
+  //Photo by <a href="https://unsplash.com/@yer_a_wizard?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Fleur</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a> 
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -76,6 +72,7 @@ p {
 
 #image-accounting-section {
   background-image: url(../images/accounting.jpg);
+  // Photo by <a href="https://unsplash.com/@thoughtcatalog?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Thought Catalog</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -141,6 +138,42 @@ p {
   margin-bottom: 0;
 }
 
+.alert-box {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  width: 500px;
+  max-width: 60%;
+  transform: translate(-50%, -50%);
+  z-index: 99999;
+  background-color: $main-color;
+  color: $nav-color;
+  padding: 15px 20px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: 15px;
+
+  .OKbutton {
+    cursor: pointer;
+    border: none;
+    margin-top: 10px;
+    padding: 3px 8px;
+    font-weight: bold;
+    align-self: center;
+    height: 30px;
+    background-color: $nav-color;
+    color: $main-color;
+  }
+
+  .OKbutton:hover {
+    background-color: $nav-background-color-hover;
+    color: $nav-color-hover;
+  }
+}
+
+
 @media only screen and (max-width: 600px) {
   #contact_box {
     flex-direction: column;
@@ -148,5 +181,12 @@ p {
     #adress {
       text-align: center;
     }
+  }
+}
+
+
+@media only screen and (max-width: 992px) {
+  #docs-row-list {
+    flex-direction: column;
   }
 }
