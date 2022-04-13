@@ -10,16 +10,6 @@
     height: 7vw;
   }
 
-
-
-  // main {
-  //   section {
-  //     width: 80%;
-  //     margin: 0 auto;
-  //     text-align: justify;
-  //   }
-  // }
-
   footer {
     background-color: $main-color;
     text-align: center;
@@ -27,9 +17,7 @@
     margin-top: auto;
     margin-bottom: 0;
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
+    flex-direction: column;
   }
 
 
@@ -44,18 +32,6 @@
       align-self: start;
       margin-left: 10px;
       height: 104px;
-    }
-
-    footer {
-      flex-direction: column;
-
-      div {
-        order: 1;
-      }
-
-      p {
-        order: 2;
-      }
     }
   }
 
