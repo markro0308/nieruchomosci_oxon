@@ -173,6 +173,80 @@ p {
   }
 }
 
+#certificates-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 10px;
+
+  .cert-img {
+    height: 350px;
+    width: 250px;
+    margin: 10px;
+  }
+
+  .cert-img:hover {
+    cursor: pointer;
+    -webkit-box-shadow: 0px 0px 36px -10px rgba(66, 68, 90, 1);
+    -moz-box-shadow: 0px 0px 36px -10px rgba(66, 68, 90, 1);
+    box-shadow: 0px 0px 36px -10px rgba(66, 68, 90, 1);
+  }
+
+  #img-box {
+    display: none;
+    position: fixed;
+    z-index: 99999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+
+    .cert-img-big {
+      align-self: center;
+      margin: auto;
+      max-width: 80%;
+      width: 607px;
+      max-height: 90%;
+      height: 850px;
+      animation-name: zoom;
+      animation-duration: 0.6s;
+      object-fit: contain;
+    }
+
+    @keyframes zoom {
+      from {
+        transform: scale(0)
+      }
+
+      to {
+        transform: scale(1)
+      }
+    }
+
+    .Xbutton {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      background-color: transparent;
+      border: none;
+      color: $nav-color;
+      padding: 5px 10px;
+      font-size: 35px;
+      transition: 0.3s;
+    }
+
+    .Xbutton:hover,
+    .Xbutton:focus {
+      color: $nav-color-hover;
+      cursor: pointer;
+    }
+
+
+  }
+}
+
 
 @media only screen and (max-width: 600px) {
   #contact_box {
@@ -182,6 +256,19 @@ p {
       text-align: center;
     }
   }
+
+  #certificates-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  // #img-box {
+  //   .cert-img-big {
+  //     width: 483px !important;
+  //     height: 640px !important;
+  //   }
+  // }
+
 }
 
 
