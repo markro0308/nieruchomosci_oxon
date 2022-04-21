@@ -15,10 +15,10 @@ function App() {
         <header>
           <Header />
         </header>
+        <nav>
+          <Navigation />
+        </nav>
         <main>
-          <nav>
-            <Navigation />
-          </nav>
           <section>
             <Page />
           </section>

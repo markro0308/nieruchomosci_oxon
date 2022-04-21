@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { NavHashLink } from 'react-router-hash-link';
 
 import Dropdown from '../components/Dropdown';
 
 import '../styles/Navigation.scss';
-import Slideshow from '../components/Slideshow';
+
 
 const list = [
     { name: "Strona główna", path: "/", hash: "#" },
@@ -29,7 +29,6 @@ const list = [
 
 function Navigation() {
 
-    const [scrolled, setScrolled] = useState(false);
     const [buttonClicked, setButtonClicked] = useState(false);
 
     const handleShowMenu = () => {
@@ -61,35 +60,6 @@ function Navigation() {
         handleShowMenu();
     }
 
-    const handleScroll = () => {
-        const offset = window.scrollY;
-        const Hheight = window.screen.width * 0.07;
-        if (offset >= Hheight) {
-            setScrolled(true);
-        }
-        else {
-            setScrolled(false);
-        }
-
-
-        // const item = document.getElementById("my-nav");
-        // const elementPosition = item.offsetTop;
-
-        // if (window.pageYOffset >= elementPosition) {
-        //   item.classList.add("sticky");
-        // } else {
-        //   item.classList.remove("sticky");
-        // }
-
-    }
-
-    useEffect(() => {
-        window.addEventListener('scroll', handleScroll);
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
-    }, [])
-
 
     const menu = list.map(item => item.sublist ? (
         <li key={item.name} className='nav-list-parent' onClick={buttonClicked ? handleShowSublist : null}>
@@ -104,15 +74,12 @@ function Navigation() {
     )
 
     return (
-        <>
-            <div className={scrolled ? 'nav-list sticky' : 'nav-list'} id="my-nav">
-                <button className='icon' onClick={handleShowMenu}><i class="icon-menu"></i></button>
-                <ul className='main-nav-ul'>
-                    {menu}
-                </ul>
-            </div>
-            <Slideshow />
-        </>
+        <div className='nav-list'>
+            <button className='icon' onClick={handleShowMenu}><i class="icon-menu"></i></button>
+            <ul className='main-nav-ul'>
+                {menu}
+            </ul>
+        </div>
     );
 };
 

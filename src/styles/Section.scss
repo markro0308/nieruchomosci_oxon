@@ -1,5 +1,49 @@
 @import 'colors';
 
+
+/*...................Sekcja Slideshow...............................*/
+
+.slideshow {
+  overflow: hidden;
+  width: 100%;
+}
+
+.slideshowSlider {
+  white-space: nowrap;
+  transition: ease 1000ms;
+}
+
+.slide {
+  display: inline-block;
+  height: 50vh;
+  width: 100%;
+
+  img {
+    height: 50vh;
+    width: 100%;
+  }
+}
+
+.slideshowDots {
+  text-align: center;
+}
+
+.slideshowDot {
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  margin: 15px 7px 0px;
+  background-color: #c4c4c4;
+}
+
+.slideshowDot.active {
+  background-color: $main-color;
+}
+
+
+/*------------------------Podstrony---------------------------------*/
 .content-box {
   width: 80%;
   margin: 0 auto;
@@ -291,6 +335,15 @@ p {
 }
 
 @media only screen and (max-width: 768px) {
+
+  .slide {
+    height: 40vh;
+
+    img {
+      height: 40vh;
+    }
+  }
+
   #map-section {
     #map {
       height: 300px;
