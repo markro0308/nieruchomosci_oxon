@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { HashLink } from 'react-router-hash-link';
-
-import MapContainer from '../components/MapContainer';
 import AlertBox from '../components/AlertBox';
+import map from '../images/mapa.jpg';
 
 function ContactPage() {
 
@@ -85,7 +84,8 @@ function ContactPage() {
                 </div>
             </div >
             <div id="map-section">
-                <MapContainer />
+                <img src={map} alt="Mapa" id="map" />
+                <p id="map-rights">Mapa na podstawie serwisu polska.e-mapa.net</p>
             </div>
         </>
     );

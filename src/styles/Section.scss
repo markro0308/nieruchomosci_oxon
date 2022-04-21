@@ -148,9 +148,20 @@ p {
 }
 
 #map-section {
-  width: 100%;
-  height: 50vh;
-  margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+
+  #map {
+    height: 400px;
+    width: 705px;
+    margin: 0 auto;
+  }
+
+  #map-rights {
+    font-size: 9px;
+    text-align: center;
+  }
 }
 
 .alert-box {
@@ -277,12 +288,15 @@ p {
     align-items: center;
   }
 
-  // #img-box {
-  //   .cert-img-big {
-  //     width: 483px !important;
-  //     height: 640px !important;
-  //   }
-  // }
+}
+
+@media only screen and (max-width: 768px) {
+  #map-section {
+    #map {
+      height: 300px;
+      width: 528px;
+    }
+  }
 
 }
 
@@ -291,4 +305,5 @@ p {
   #docs-row-list {
     flex-direction: column;
   }
+
 }
