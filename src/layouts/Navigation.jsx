@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { HashLink } from 'react-router-hash-link';
+import { NavHashLink } from 'react-router-hash-link';
 
 import Dropdown from '../components/Dropdown';
 
@@ -70,6 +70,17 @@ function Navigation() {
         else {
             setScrolled(false);
         }
+
+
+        // const item = document.getElementById("my-nav");
+        // const elementPosition = item.offsetTop;
+
+        // if (window.pageYOffset >= elementPosition) {
+        //   item.classList.add("sticky");
+        // } else {
+        //   item.classList.remove("sticky");
+        // }
+
     }
 
     useEffect(() => {
@@ -81,20 +92,20 @@ function Navigation() {
 
 
     const menu = list.map(item => item.sublist ? (
-        <li key={item.name} className='nav-list-parent' onClick={handleShowSublist}>
-            <HashLink smooth to={buttonClicked ? "#;" : `${item.path}${item.hash}`}>{item.name}</HashLink>
+        <li key={item.name} className='nav-list-parent' onClick={buttonClicked ? handleShowSublist : null}>
+            <NavHashLink smooth to={`${item.path}${item.hash}`} onClick={buttonClicked ? ((e) => e.preventDefault()) : null}>{item.name}</NavHashLink>
             <Dropdown sublist={item.sublist} click={buttonClicked ? handleClickOnMenuList : handleClick} />
         </li>
     ) : (
         <li key={item.name}>
-            <HashLink smooth to={`${item.path}${item.hash}`} onClick={buttonClicked ? handleClickOnMenuList : null}>{item.name}</HashLink>
+            <NavHashLink smooth to={`${item.path}${item.hash}`} onClick={buttonClicked ? handleClickOnMenuList : null}>{item.name}</NavHashLink>
         </li>
     )
     )
 
     return (
         <>
-            <div className={scrolled ? 'nav-list sticky' : 'nav-list'}>
+            <div className={scrolled ? 'nav-list sticky' : 'nav-list'} id="my-nav">
                 <button className='icon' onClick={handleShowMenu}><i class="icon-menu"></i></button>
                 <ul className='main-nav-ul'>
                     {menu}

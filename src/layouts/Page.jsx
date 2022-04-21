@@ -5,6 +5,7 @@ import ContactPage from '../pages/ContactPage';
 import HomePage from '../pages/HomePage';
 import ManagementPage from '../pages/ManagementPage';
 import OfferPage from '../pages/OfferPage';
+import PrivacyPolicy from '../pages/PrivacyPolicy';
 import '../styles/Section.scss';
 
 function Page() {
@@ -15,6 +16,7 @@ function Page() {
             <Route path="/oferta" element={<OfferPage />} />
             <Route path="/kontakt" element={<ContactPage />} />
             <Route path="/certyfikaty" element={<CertificatesPage />} />
+            <Route path="/polityka-prywatnosci" element={<PrivacyPolicy />} />
         </Routes>
     );
 };

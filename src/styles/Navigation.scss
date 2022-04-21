@@ -5,7 +5,7 @@
     margin: 0 auto 0 auto;
     text-align: center;
     padding: 0;
-    transition: all .7s ease-in;
+    //  transition: all .7s ease-in;
     z-index: 99999;
 
     .icon {
@@ -39,6 +39,10 @@
                 cursor: pointer;
                 color: $nav-color-hover;
                 transition: .2s;
+            }
+
+            a.active {
+                background-color: $nav-background-color-active;
             }
 
             .sub-nav-ul {
@@ -81,7 +85,7 @@
         background-color: $main-color;
         color: $nav-color;
         // transition: none; nie dziala?? brak efektow
-        transition: all .7s ease-in;
+        //  transition: all .7s ease-in;
 
         .icon {
             // display: flex;
@@ -116,7 +120,7 @@
             display: flex;
             flex-direction: column;
             z-index: 99999;
-            transition: all .7s ease-in;
+            //  transition: all .7s ease-in;
             // margin: auto 0 0 auto;
 
 

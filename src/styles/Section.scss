@@ -87,19 +87,18 @@ p {
   width: 80%;
   margin: 0 auto;
 
-  // #adress {
-  //   flex-grow: 1;
-  // }
 
   #form-box {
-    //  flex-grow: 1;
 
     form {
       display: flex;
       flex-direction: column;
-      //  flex-grow: 2;
+      max-width: 350px;
+      margin-left: auto;
+      margin-right: auto;
 
-      input,
+      input[type=text],
+      input[type=email],
       textarea {
         padding: 1em;
         margin: 1em;
@@ -107,6 +106,22 @@ p {
         font-size: 15px;
         font-family: inherit;
       }
+
+      span {
+        color: inherit;
+        font-size: 15px;
+        font-family: inherit;
+        margin: 1em;
+
+        a {
+          text-decoration: none;
+        }
+
+        a:hover {
+          text-decoration: underline;
+        }
+      }
+
 
       button {
         margin: 15px;

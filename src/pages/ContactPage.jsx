@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { HashLink } from 'react-router-hash-link';
+
 import MapContainer from '../components/MapContainer';
 import AlertBox from '../components/AlertBox';
 
@@ -8,12 +10,14 @@ function ContactPage() {
     const [mail, setMail] = useState("");
     const [phone, setPhone] = useState("");
     const [message, setMessage] = useState("");
+    const [accept, setAccept] = useState(false);
     const [myAlert, setMyAlert] = useState("");
 
     const handleSetName = (e) => setName(e.target.value);
     const handleSetMail = (e) => setMail(e.target.value);
     const handleSetPhone = (e) => setPhone(e.target.value);
     const handleSetMessage = (e) => setMessage(e.target.value);
+    const handleSetAccept = (e) => setAccept(e.target.checked);
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -24,19 +28,16 @@ function ContactPage() {
         let email_field = document.getElementById("email");
 
         if (!name_field.value.match(lettersNameSurname)) {
-            // alert("Podaj imię i nazwisko w pierwszym polu. Imię i nazwisko nie może zawierać cyfr i znaków specjalnych.");
             setMyAlert('Podaj imię i nazwisko w pierwszym polu. Imię i nazwisko nie może zawierać cyfr i znaków specjalnych.');
             e.preventDefault();
             return;
         }
         if (email_field.value === "" && number_field.value === "") {
-            // alert("Podaj do kontaktu numer telefonu lub adres email.");
             setMyAlert('Podaj do kontaktu numer telefonu lub adres email.')
             e.preventDefault();
             return;
         }
         if (number_field.value !== "" && !number_field.value.match(number)) {
-            // alert("Numer telefonu może się składać tylko z 9 cyfr.");
             setMyAlert('Numer telefonu może się składać tylko z 9 cyfr.')
             e.preventDefault();
             return;
@@ -46,7 +47,7 @@ function ContactPage() {
         setMail("");
         setPhone("");
         setMessage("");
-        //  alert("Wiadomość została wysłana! Wkrótce się z Tobą skontaktujemy.");
+        setAccept(false);
         setMyAlert('Wiadomość została wysłana! Wkrótce się z Tobą skontaktujemy.');
     };
 
@@ -56,13 +57,13 @@ function ContactPage() {
                 <div id="adress">
                     <h3>Biuro</h3>
                     <p>F.U.H. „OXON” Adam Kroker</p>
-                    <p>ul. Tadeusza Kościuszki 63, 41-503 Chorzów</p>
+                    <p>ul. Tadeusza Kościuszki 63/311, 41-500 Chorzów</p>
                     <p><i class="icon-mail"></i> oxon_sl@interia.pl</p>
                     <p><i class="icon-phone"></i> +48 507 133 631, +48 604 958 671</p>
                     <p>NIP: 627 100 41 25</p>
                     <p>REGON: 270338238</p>
                     <p>Nr konta bankowego:</p>
-                    <p>52 1952 0000 5465 0085 6789 8545</p>
+                    <p>44 1160 2202 0000 0004 5127 8932</p>
                 </div>
                 <div id="form-box">
                     <form onSubmit={handleSubmit}>
@@ -70,11 +71,19 @@ function ContactPage() {
                         <input type="email" id="email" value={mail} onChange={handleSetMail} placeholder="Adres email" />
                         <input type="text" id="phone_nr" value={phone} onChange={handleSetPhone} placeholder="Numer telefonu" />
                         <textarea cols="30" rows="10" value={message} onChange={handleSetMessage} placeholder="Treść wiadomości" required></textarea>
+                        <span>
+                            <input type="checkbox" checked={accept} onChange={handleSetAccept} name="clause" id="clause" required />
+                            <label htmlFor="clause" >Oświadczam, że wyrażam zgodę na przetwarzanie danych osobowych zgodnie z
+                                <HashLink smooth to="/polityka-prywatnosci#">
+                                    < strong > Polityką prywatności</strong>
+                                </HashLink>
+                            </label>
+                        </span>
                         <button>Wyślij</button>
                     </form>
                     {myAlert !== "" && <AlertBox msg={myAlert} click={() => setMyAlert("")} />}
                 </div>
-            </div>
+            </div >
             <div id="map-section">
                 <MapContainer />
             </div>

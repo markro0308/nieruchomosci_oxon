@@ -23,7 +23,7 @@ function Footer() {
                 <div>
                     <h4>Nasze biuro</h4>
                     <div id="footer-contact">
-                        <p>ul. Tadeusza Kościuszki 63, 41-503 Chorzów</p>
+                        <p>ul. Tadeusza Kościuszki 63/311, 41-500 Chorzów</p>
                         <p><strong>Telefon:</strong> +48 507 133 631, +48 604 958 671</p>
                         <p><strong>E-mail:</strong> oxon_sl@interia.pl</p>
                     </div>
