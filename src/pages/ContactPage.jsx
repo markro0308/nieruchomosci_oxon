@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
+import emailjs from 'emailjs-com';
 import { HashLink } from 'react-router-hash-link';
 import AlertBox from '../components/AlertBox';
-import map from '../images/mapa.jpg';
 
 function ContactPage() {
 
@@ -31,8 +31,8 @@ function ContactPage() {
             e.preventDefault();
             return;
         }
-        if (email_field.value === "" && number_field.value === "") {
-            setMyAlert('Podaj do kontaktu numer telefonu lub adres email.')
+        if (email_field.value === "" || number_field.value === "") {
+            setMyAlert('Podaj do kontaktu numer telefonu oraz adres email.')
             e.preventDefault();
             return;
         }
@@ -41,6 +41,15 @@ function ContactPage() {
             e.preventDefault();
             return;
         }
+
+
+        emailjs.sendForm(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLATE_ID, e.target, process.env.REACT_APP_USER_ID)
+            .then((result) => {
+                console.log(result.text);
+            }, (error) => {
+                setMyAlert(error.text);
+                return;
+            });
 
         setName("");
         setMail("");
@@ -57,19 +66,19 @@ function ContactPage() {
                     <h3>Biuro</h3>
                     <p>F.U.H. „OXON” Adam Kroker</p>
                     <p>ul. Tadeusza Kościuszki 63/311, 41-500 Chorzów</p>
-                    <p><i class="icon-mail"></i> oxon_sl@interia.pl</p>
-                    <p><i class="icon-phone"></i> +48 507 133 631, +48 604 958 671</p>
+                    <p><i className="icon-mail"></i> oxon_sl@interia.pl</p>
+                    <p><i className="icon-phone"></i> +48 507 133 631, +48 604 958 671</p>
                     <p>NIP: 627 100 41 25</p>
                     <p>REGON: 270338238</p>
                     <p>Nr konta bankowego:</p>
                     <p>44 1160 2202 0000 0004 5127 8932</p>
                 </div>
                 <div id="form-box">
-                    <form onSubmit={handleSubmit}>
-                        <input type="text" id="name_surname" value={name} onChange={handleSetName} placeholder="Imię i Nazwisko" required />
-                        <input type="email" id="email" value={mail} onChange={handleSetMail} placeholder="Adres email" />
-                        <input type="text" id="phone_nr" value={phone} onChange={handleSetPhone} placeholder="Numer telefonu" />
-                        <textarea cols="30" rows="10" value={message} onChange={handleSetMessage} placeholder="Treść wiadomości" required></textarea>
+                    <form action="#" method="POST" onSubmit={handleSubmit}>
+                        <input type="text" id="name_surname" name="from_name" value={name} onChange={handleSetName} placeholder="Imię i Nazwisko" required />
+                        <input type="email" id="email" name="from_email" value={mail} onChange={handleSetMail} placeholder="Adres email" />
+                        <input type="text" id="phone_nr" name="from_phone_nr" value={phone} onChange={handleSetPhone} placeholder="Numer telefonu" />
+                        <textarea cols="30" rows="10" name="message" value={message} onChange={handleSetMessage} placeholder="Treść wiadomości" required></textarea>
                         <span>
                             <input type="checkbox" checked={accept} onChange={handleSetAccept} name="clause" id="clause" required />
                             <label htmlFor="clause" >Oświadczam, że wyrażam zgodę na przetwarzanie danych osobowych zgodnie z
@@ -84,7 +93,7 @@ function ContactPage() {
                 </div>
             </div >
             <div id="map-section">
-                <img src={map} alt="Mapa" id="map" />
+                <div id="map"></div>
                 <p id="map-rights">Mapa na podstawie serwisu polska.e-mapa.net</p>
             </div>
         </>
