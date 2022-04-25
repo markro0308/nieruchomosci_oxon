@@ -85,24 +85,25 @@ function OfferPage() {
                             <ul className='page-list'>
                                 <li>numer księgi wieczystej (w przypadku elektronicznej księgi) lub aktualny odpis z księgi wieczystej,</li>
                                 <li>wypis z rejestru gruntów,</li>
-                                <li>kopia mapy zasadniczej (S+E+U) lub mapy ewidencyjne i sytuacyjno – wysokościowej,</li>
+                                <li>kopia mapy zasadniczej (S+E+U) lub mapy ewidencyjnej,</li>
                                 <li>zaświadczenie o przeznaczeniu działki w miejscowym planie zagospodarowania przestrzennego / studium uwarunkowań i kierunków zagospodarowania przestrzennego lub decyzja o warunkach zabudowy,</li>
-                                <li>decyzja zatwierdzająca projekt budowlany i udzielający pozwolenia na budowę lub decyzja o pozwoleniu na użytkowanie,</li>
-                                <li>projekt architektoniczno – budowlany lub inwentaryzacja budynku dziennik budowy jeżeli inwestycja nie jest zakończona,</li>
+                                <li>decyzja zatwierdzająca projekt budowlany i udzielająca pozwolenia na budowę lub decyzja o pozwoleniu na użytkowanie,</li>
+                                <li>projekt architektoniczno – budowlany lub inwentaryzacja budynku,</li>
+                                <li>dziennik budowy jeżeli inwestycja nie jest zakończona,</li>
                                 <li>umowa przedwstępna sprzedaży.</li>
                             </ul>
                             <p className="page-list-subtitle"><strong>Nieruchomości komercyjne, usługowe:</strong></p>
                             <ul className='page-list'>
                                 <li>numer księgi wieczystej lub odpis z księgi wieczystej nie starszy niż 3 miesiące,</li>
-                                <li>wypis z rejestru gruntów ( nie dotyczy nieruchomości lokalowych),</li>
-                                <li>kopia mapy zasadniczej (S+E+U) lub mapy ewidencyjne i sytuacyjno – wysokościowej ( nie dotyczy nieruchomości lokalowych),</li>
+                                <li>wypis z rejestru gruntów (nie dotyczy nieruchomości lokalowych),</li>
+                                <li>kopia mapy zasadniczej (S+E+U) lub mapy ewidencyjnej (nie dotyczy nieruchomości lokalowych),</li>
                                 <li>zaświadczenie o przeznaczeniu działki w miejscowym planie zagospodarowania przestrzennego lub decyzja o warunkach zabudowy,</li>
                                 <li>decyzja zatwierdzająca projekt budowlany i udzielający pozwolenia na budowę lub decyzja o pozwoleniu na użytkowanie obiektu,</li>
                                 <li>projekt architektoniczno – budowlany lub inwentaryzacja budynku lub rzut lokalu,</li>
                                 <li>dziennik budowy jeżeli inwestycja nie jest zakończona (nie dotyczy nieruchomości lokalowych),</li>
                                 <li>informację o wysokości podatku od nieruchomości,</li>
-                                <li>informacje o wysokości opłaty za użytkowanie wieczyste gruntu jeśli dotyczy,</li>
-                                <li>informację o wysokości kosztów zarządu i ochrony budynku; •  informację o wysokości opłat za ubezpieczenie budynku,</li>
+                                <li>informacje o wysokości opłaty za użytkowanie wieczyste gruntu (jeśli dotyczy),</li>
+                                <li>informację o wysokości kosztów zarządu, ochrony budynku, opłat za ubezpieczenie budynku,</li>
                                 <li>informację na temat wynajętej powierzchni (wysokość stawek najmu, rodzaj zawartej umowy najmu itp).</li>
                             </ul>
                         </div>

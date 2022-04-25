@@ -5,7 +5,6 @@
     margin: 0 auto 0 auto;
     text-align: center;
     padding: 0;
-    //  transition: all .7s ease-in;
     z-index: 99999;
 
     .icon {
@@ -75,29 +74,14 @@
     }
 }
 
-img {
-    height: 50vh;
-    overflow: hidden;
-    width: 100%;
-}
-
 
 
 @media only screen and (max-width: 992px) {
     .nav-list {
-        // display: flex;
-        // flex-direction: column;
-        // align-items: flex-end;
-
-        // height: calc(1.2em + 0.75em + 0.75em);
         background-color: $main-color;
         color: $nav-color;
-        // transition: none; nie dziala?? brak efektow
-        //  transition: all .7s ease-in;
 
         .icon {
-            // display: flex;
-            //  order: 1;
             display: block;
             margin-left: auto;
             margin-right: 0;
@@ -105,7 +89,6 @@ img {
             color: #d8e6f3;
             padding: 0 1em;
             border: 0;
-            //   align-items: center;
             font-size: 20px;
             height: calc(1.2em + 0.75em + 0.75em);
 
@@ -128,9 +111,6 @@ img {
             display: flex;
             flex-direction: column;
             z-index: 99999;
-            //  transition: all .7s ease-in;
-            // margin: auto 0 0 auto;
-
 
             li {
                 border-right: none;
@@ -146,7 +126,6 @@ img {
                     display: flex;
                     flex-direction: column;
                     z-index: 99999;
-                    //   transition: all .7s ease-in; nie dziala? brak efektow
                     position: static;
                     padding: 0;
                     font-size: 15px;

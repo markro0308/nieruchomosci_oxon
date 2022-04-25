@@ -1,7 +1,7 @@
 import React from 'react';
 
 import '../styles/Header.scss';
-import logo from '../logo_nv.svg';
+import logo from '../images/logo_nv.svg';
 
 function Header() {
     return (
@@ -11,12 +11,12 @@ function Header() {
             </div>
 
             <div className="contact">
-                <p><i class="icon-mail"></i> oxon_sl@interia.pl</p>
+                <p><i className="icon-mail"></i> oxon_sl@interia.pl</p>
             </div>
 
             <div className="contact">
-                <p>Zarządzanie <i class="icon-phone"></i> + 48 507 133 631</p>
-                <p>Wycena <i class="icon-phone"></i> + 48 604 958 671</p>
+                <p>Zarządzanie <i className="icon-phone"></i> + 48 507 133 631</p>
+                <p>Wycena <i className="icon-phone"></i> + 48 604 958 671</p>
             </div>
         </>
     );

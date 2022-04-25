@@ -65,10 +65,9 @@ function ManagementPage() {
                         <li>Przechowywanie dokumentacji statystycznej i księgowo-rozliczeniowej.</li>
                         <li>Prowadzenie rachunku bankowego Klienta.</li>
                         <li>Prowadzenie sprawozdawczości Klienta dla urzędów zgodnie z obowiązującymi przepisami.</li>
-                        <li>Dostęp przez Internet do indywidualnej kartoteki właściciela lokalu (e-kartoteka).</li>
                         <li>Windykacja należności z tytułu zarządu nieruchomością wspólną, aż do skierowania sprawy na drogę sądową.</li>
                         <li>Roczne rozliczenie świadczeń za rok poprzedni po zebraniu sprawozdawczym.</li>
-                        <li>Bieżące informowanie Klienta o kosztach związanych z utrzymaniem nieruchomości wspólnej, mediów oraz kosztów remontów.</li>
+                        <li>Informowanie Klienta o kosztach związanych z utrzymaniem nieruchomości wspólnej, mediów oraz kosztów remontów.</li>
                     </ul>
                     <p>Nasz system zarządzania nieruchomościami zorientowany jest na potrzeby Właścicieli nieruchomości. Aby osiągnąć ten cel w sposób elastyczny dostosowujemy naszą pracę do indywidualnych preferencji obecnych oraz potencjalnych klientów. Jesteśmy otwarci na Państwa oczekiwania, uwagi i propozycje. Chętnie odpowiemy na wszystkie pytania, służymy bezpłatną radą i pomocą.</p>
                 </div>

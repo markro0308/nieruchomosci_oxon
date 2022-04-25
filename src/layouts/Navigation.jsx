@@ -75,7 +75,7 @@ function Navigation() {
 
     return (
         <div className='nav-list'>
-            <button className='icon' onClick={handleShowMenu}><i class="icon-menu"></i></button>
+            <button className='icon' onClick={handleShowMenu}><i className="icon-menu"></i></button>
             <ul className='main-nav-ul'>
                 {menu}
             </ul>
