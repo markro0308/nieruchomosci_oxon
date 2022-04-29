@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/nieruchomosci_oxon/static/css/main.c9276f1e.css",
+    "main.js": "/nieruchomosci_oxon/static/js/main.d026f410.js",
+    "static/media/slajder2.jpg": "/nieruchomosci_oxon/static/media/slajder2.4083223de28cb5dff68b.jpg",
+    "static/media/slajder1.jpg": "/nieruchomosci_oxon/static/media/slajder1.c04749b79fd4880cdab7.jpg",
+    "static/media/slajder3.jpg": "/nieruchomosci_oxon/static/media/slajder3.990bb29d91041710f9b8.jpg",
+    "static/media/map.png": "/nieruchomosci_oxon/static/media/map.2a453bf7b45ac824c598.png",
+    "static/media/slajder4.jpg": "/nieruchomosci_oxon/static/media/slajder4.3a48ac5c1b58dcc23ed7.jpg",
+    "static/media/technical-support.jpg": "/nieruchomosci_oxon/static/media/technical-support.c98f65f61e5506d1e91b.jpg",
+    "static/media/accounting.jpg": "/nieruchomosci_oxon/static/media/accounting.702c8b8f0327723d80f8.jpg",
+    "static/media/offer.jpg": "/nieruchomosci_oxon/static/media/offer.05aafcb3474f838eeb48.jpg",
+    "static/media/certyfikat-Maria.jpg": "/nieruchomosci_oxon/static/media/certyfikat-Maria.29c6b500f9f1fe7b1a3d.jpg",
+    "static/media/certyfikat-Adam.jpg": "/nieruchomosci_oxon/static/media/certyfikat-Adam.41c7d16b0d598634d00c.jpg",
+    "static/media/IMARS.png": "/nieruchomosci_oxon/static/media/IMARS.c2197efe004cd51f1156.png",
+    "static/media/SSRM.jpg": "/nieruchomosci_oxon/static/media/SSRM.094d814e52d8f3ea1338.jpg",
+    "static/media/PFSRM.jpg": "/nieruchomosci_oxon/static/media/PFSRM.0cbd058a83e8210e3f09.jpg",
+    "static/media/Baza silesia.png": "/nieruchomosci_oxon/static/media/Baza silesia.fd8773ecb64a754dbbcf.png",
+    "static/media/logo_nv.svg": "/nieruchomosci_oxon/static/media/logo_nv.11deb11ff40090ac41d96b61d0ce78d3.svg",
+    "static/media/fontello.eot?29238534": "/nieruchomosci_oxon/static/media/fontello.3e318df9c72f24df73f5.eot",
+    "static/media/fontello.ttf?29238534": "/nieruchomosci_oxon/static/media/fontello.f94abb9060c5998ae8b3.ttf",
+    "static/media/fontello.woff?29238534": "/nieruchomosci_oxon/static/media/fontello.7b4f4fac6cec5c3b0540.woff",
+    "static/media/fontello.woff2?29238534": "/nieruchomosci_oxon/static/media/fontello.a507574a126e5640c251.woff2",
+    "static/media/fontello.svg?29238534": "/nieruchomosci_oxon/static/media/fontello.10fd2254637c624363f0.svg",
+    "index.html": "/nieruchomosci_oxon/index.html",
+    "main.c9276f1e.css.map": "/nieruchomosci_oxon/static/css/main.c9276f1e.css.map",
+    "main.d026f410.js.map": "/nieruchomosci_oxon/static/js/main.d026f410.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c9276f1e.css",
+    "static/js/main.d026f410.js"
+  ]
+}
