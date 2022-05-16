@@ -322,6 +322,17 @@ p {
 
 
 @media only screen and (max-width: 600px) {
+
+  .content-box {
+    .page-list {
+      text-align: initial;
+    }
+
+    .page-list-subtitle {
+      text-align: initial;
+    }
+  }
+
   #contact_box {
     flex-direction: column;
 

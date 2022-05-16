@@ -37,7 +37,7 @@ function ManagementPage() {
                         <li>Przechowywanie i utrzymywanie w należytym stanie dokumentacji technicznej budynku.</li>
                         <li>Przeprowadzanie okresowych przeglądów zgodnie ustawą Prawo Budowlane oraz warunkami gwarancyjnymi.</li>
                         <li>Organizacja i nadzór nad konserwacją budynku.</li>
-                        <li>Organizacja pogotowia lokatorskiego.</li>
+                        <li>Organizacja pogotowia awaryjnego.</li>
                         <li>Przygotowywanie planów remontowych.</li>
                         <li>Realizacja planów remontów zgodnie z przyjętymi uchwałami.</li>
                         <li>Pozyskiwanie wykonawców usług i robót budowlanych, negocjowanie cen i warunków umów.</li>
