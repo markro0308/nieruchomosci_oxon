@@ -9,7 +9,7 @@ function Footer() {
     return (
         <>
             <div id="footer-partners">
-                <h4>Nasi partnerzy</h4>
+                <h5>Nasi partnerzy</h5>
                 <div id="img-partners">
                     <img id="img-imar" src={imars} alt="IMAR SILESIA" />
                     <img id="img-baza" src={baza} alt="BAZA SILESIA" />
